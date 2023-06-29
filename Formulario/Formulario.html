@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-</head>
-<body>
-      
-</body>
+  </head>
+  <body>
+    <h2>Mi formulario de registro</h2>
+    <form>
+      <p>
+        Nombre:
+        <input type="text" name="nombre"> <br>
+      </p>
+      <p>
+        Apellido:
+        <input type="text" name="apellido"> <br>
+      </p>
+      <p>
+        Email:
+        <input type="email" name="mail"><br>
+      </p>
+      <p>
+        Contraseña:
+        <input type="password" id="password" name="password">
+      </p>
+      <p>
+        Confirmar contraseña:
+        <input type="password" id="confirm-password" name="confirmar-contraseña">
+      </p>
+      <p>
+        Cumpleaños:
+        <input type="date" id="date" name="cumpleaños">
+      </p>
+      <input type="radio" id="hombre" name="genero" value="hombre">
+      <label for="hombre">Hombre</label>
+      <input type="radio" id="mujer" name="genero" value="mujer">
+      <label for="mujer">Mujer</label>
+      <input type="radio" id="otro" name="genero" value="otro">
+      <label for="otro">Otro</label>
+      <p>
+        Una breve descripción de ti
+      </p>
+      <textarea name="descripcion"></textarea>
+      <p>
+        Lenguaje favorito
+        <select name="lenguaje">
+          <option value="javascript">Javascript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+        </select>
+      </p>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
 </html>
