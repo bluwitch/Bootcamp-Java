@@ -3,13 +3,71 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es el blog de mi perro Coco que es alto lindo.">
     <title>El blog de Coco</title>
 </head>
 
 <body>
-    <h1>Coco el perro</h1>
-    <img src="Coco.jpg" alt="Coquito el perro">
+    <div>
+        <h1>Coco el perro</h1>
+        <a href="http://127.0.0.1:3000/Blog/blog.html">
+            <img src="Coco.jpg" alt="Coquito el perro">
+        </a>
+
+        <div>
+            <h2>Biografía de Coco</h2>
+            <p>
+                Mi nombre es Coco, soy un perro labrador muy tonto y cariñoso. Me encanta comer, siempre corro y doy
+                vueltas cuando viene alguien, nuevo o conocido. Una de mis personas favoritas es mi abuela porque me da
+                galletitas :p.
+            </p>
+            <p>Cosas que me gustan:</p>
+            <ul>
+                <li>Mi familia</li>
+                <li>Comer</li>
+                <li>Dormir</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Raza</th>
+                        <th>Color de pelo</th>
+                        <th>Tamaño</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Labrador</td>
+                        <td>Dorado</td>
+                        <td>Mediano</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h2>Breve encuesta</h2>
+        <form action="URL_DEL_DESTINO" method="POST">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="mail">
+            <br>
+            <input type="radio" id="enviar" name="enviar-novedad" value="enviar">
+            <label for="enviar">Enviarme novedades de Coco!</label>
+            <br>
+            <input type="radio" id="no-enviar" name="enviar-novedad" value="no-enviar">
+            <label for="no-enviar">No necesito novedades por ahora</label>
+            <br>
+            <h2>¿Cómo supiste de éste perrito?</h2>
+            <label for="check-instagram">Instagram:</label>
+            <input type="checkbox" id="check-instagram" name="checklist" value="instagram">
+            <label for="check-facebook">Facebook:</label>
+            <input type="checkbox" id="check-facebook" name="checklist" value="facebook">
+            <label for="check-twitter">Twitter:</label>
+            <input type="checkbox" id="check-twitter" name="checklist" value="twitter">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 </body>
 
 </html>
