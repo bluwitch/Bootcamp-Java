@@ -3,15 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Este es el blog de mi perro Coco que es alto lindo.">
     <title>El blog de Coco</title>
+    <meta name="description" content="Este es el blog de mi perro Coco que es alto lindo.">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
+    <link rel="stylesheet" href="style.css">
+    <div id="important">
         <h1>Coco el perro</h1>
         <a href="http://127.0.0.1:3000/Blog/blog.html">
-            <img src="Coco.jpg" alt="Coquito el perro">
+            <div class="imagen">
+                <img src="Coco.jpg" alt="Coquito el perro">
+            </div>
         </a>
 
         <div>
@@ -45,7 +49,7 @@
             </table>
         </div>
     </div>
-    <div>
+    <div id="encuesta">
         <h2>Breve encuesta</h2>
         <form action="URL_DEL_DESTINO" method="POST">
             <label for="email">Email:</label>
@@ -58,12 +62,12 @@
             <label for="no-enviar">No necesito novedades por ahora</label>
             <br>
             <h2>¿Cómo supiste de éste perrito?</h2>
-            <label for="check-instagram">Instagram:</label>
             <input type="checkbox" id="check-instagram" name="checklist" value="instagram">
-            <label for="check-facebook">Facebook:</label>
+            <label for="check-instagram">Instagram</label>
             <input type="checkbox" id="check-facebook" name="checklist" value="facebook">
-            <label for="check-twitter">Twitter:</label>
+            <label for="check-facebook">Facebook</label>
             <input type="checkbox" id="check-twitter" name="checklist" value="twitter">
+            <label for="check-twitter">Twitter</label>
             <br>
             <input type="submit" value="Enviar">
         </form>
