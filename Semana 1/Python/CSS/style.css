@@ -1,0 +1,266 @@
+body {
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    width: 970px;
+    height: 945px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #245076, #3b7db5);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 320px;
+    height: 100px;
+    margin: 15px 0 0 25px;
+}
+
+header p,
+header a {
+    margin: 0;
+    margin-right: 10px;
+    font-size: small;
+}
+
+header p {
+    text-align: right;
+    color: white;
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
+header a {
+    color: #d3b200;
+    padding-top: 10px;
+}
+
+.search-bar {
+    background-color: #444444;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-right: 15px;
+    border: solid #444444;
+    border-width: 30px;
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.384);
+}
+
+.search-bar input {
+    margin-right: 5px;
+    height: 30px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    margin-left: 5px;
+    background-color: #245076;
+    color: white;
+    border: solid #245076;
+    border-width: 6px;
+    border-radius: 4px;
+    padding: 3px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    background-color: #457ead;
+    margin: auto;
+    width: 90%;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.596);
+    font-size: larger;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    text-align: center;
+}
+
+.menu ul li a {
+    margin-left: 22px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.menu ul li a:hover {
+    background-color: #245076;
+}
+
+.cuerpo {
+    display: flex;
+}
+
+.nav {
+    margin-left: 10%;
+    flex: 2;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.nav ul li {
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.5;
+}
+
+.nav ul li::before {
+    content: "»";
+    color: #d3b200;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.nav ul li a {
+    color: white;
+}
+
+.about {
+    margin-top: 10px;
+    margin-right: 10%;
+    font-size: small;
+    text-align: center;
+    color: white;
+    flex: 5;
+    text-indent: 10px;
+}
+
+.about .frase {
+    font-size: large;
+    color: #d3b200;
+    font-style: italic;
+    line-height: 1.6em;
+    margin-top: 0;
+}
+
+.about .frase span {
+    color: white;
+    font-style: normal;
+}
+
+.info {
+    background-color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.info .start {
+    margin-left: 8%;
+}
+
+.info .applications {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 20px;
+}
+
+.parrafos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    background-color: white;
+}
+
+.parrafos .p1 {
+    margin-left: 10%;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.listas {
+    background-color: white;
+    padding-top: 0px;
+    display: flex;
+    flex: auto;
+    padding-left: 10%;
+    text-align: center;
+}
+
+.listas .guides li {
+    list-style: square;
+}
+
+.listas .guides a {
+    list-style: square;
+    text-decoration: none;
+    color: #67a9ff;
+    text-align: center;
+}
+
+.listas .guides-2 {
+    margin-top: 0;
+}
+
+.listas .guides-2 a {
+    list-style: square;
+    text-decoration: none;
+    color: #67a9ff;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.listas .guides-2 li {
+    list-style: square;
+    margin-left: 120px;
+    padding-bottom: 1px;
+}
+.parrafos .p2 {
+    margin-right: 20%;
+}
+
+.parrafos .p2 span {
+    color: #67a9ff;
+}
+.footer {
+    background: linear-gradient(to top, #3b7db5, #0e476d);
+    padding: 5px 5px;
+}
+.footer a {
+    text-decoration: none;
+    color: #8ac1f1;
+}
+
+.footer li {
+    font-size: larger;
+    list-style: none;
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 45px;
+}
+.footer .copyright {
+    text-align: center;
+    font-size: smaller;
+    color: #8ac1f1;
+}
