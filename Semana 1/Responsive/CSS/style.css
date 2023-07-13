@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: rgb(158, 157, 157);
+    padding: 20px;
+    border: solid #e7ce7b;
+    border-width: 1px;
+    font-weight: lighter;
+    width: 600px;
+}
+
+p {
+    background-color: #b9b9b9;
+    padding: 20px;
+    border: solid #e7ce7b;
+    border-width: 1px;
+    width: 600px;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        width: 495px;
+    }
+
+    p {
+        width: 495px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    h1 {
+        width: 342px;
+    }
+
+    p {
+        width: 342px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        width: 221px;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    p {
+        width: 221px;
+    }
+}
