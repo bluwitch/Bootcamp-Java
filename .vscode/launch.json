@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringManipulatorTesting",
+            "request": "launch",
+            "mainClass": "StringManipulatorTesting",
+            "projectName": "Bootcamp-Java_67f74a5c"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-DemoApplication<demo>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
