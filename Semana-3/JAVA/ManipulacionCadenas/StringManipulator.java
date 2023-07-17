@@ -20,4 +20,10 @@ public class StringManipulator {
         int index = word.indexOf(subString);
         return index;
     }
+
+    public static String concatSubstring(String string1,int index1, int index2, String string2){
+        String subString = string1.substring(index1, index2);
+        return subString.concat(string2);
+    }
+
 }

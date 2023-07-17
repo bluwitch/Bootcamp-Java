@@ -22,5 +22,9 @@ public class StringManipulatorTesting {
 
         System.out.println(d); // 2
         System.out.println(e); // -1
+
+    
+        String palabra = manipulator.concatSubstring("Hola", 1, 3, "mundo");
+        System.out.println(palabra); // olmundo
     }
 }
