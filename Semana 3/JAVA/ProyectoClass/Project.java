@@ -16,7 +16,7 @@ public class Project {
         this.descripcion = descripcion;
     }
 
-    public Project(String nombre, Double cost, String descripcion){
+    public Project(String nombre, Double cost, String descripcion) {
         this.nombre = nombre;
         this.cost = cost;
         this.descripcion = descripcion;
@@ -29,7 +29,7 @@ public class Project {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+
     public Double getCost() {
         return cost;
     }
@@ -47,6 +47,6 @@ public class Project {
     }
 
     public String elevatorPitch() {
-        return nombre + "(" +  cost + ")" +  ":" + descripcion;
+        return nombre + "(" + cost + ")" + ":" + descripcion;
     }
 }
