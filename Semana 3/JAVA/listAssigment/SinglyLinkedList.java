@@ -5,5 +5,6 @@ public class SinglyLinkedList {
     public SinglyLinkedList() {
         // Constructor
     }
+    
 
 }
