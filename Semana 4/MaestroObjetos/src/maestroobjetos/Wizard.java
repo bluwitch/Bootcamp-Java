@@ -4,10 +4,8 @@ public class Wizard extends Human {
 
     public Wizard(String rol) {
         super(rol);
-        this.getRol();
         this.setRol("Wizard");
         this.setHealth(50);
-        this.getIntelligence();
         this.setIntelligence(8);
     }
 
