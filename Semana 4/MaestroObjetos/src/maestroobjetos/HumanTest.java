@@ -20,6 +20,8 @@ public class HumanTest {
         ninja.attack(wizard);
         ninja.attack(wizard);
 
+        Wizard wizer = new Wizard("Wizard");
+        wizer.obtenerStats("Wizard");
     }
 
 }
