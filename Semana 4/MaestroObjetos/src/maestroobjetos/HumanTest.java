@@ -3,25 +3,35 @@ package maestroobjetos;
 public class HumanTest {
 
     public static void main(String[] args) {
-        Human wizard = new Human("Wizard");
+        /* 
 
-        Human samurai = new Human("Samurai");
+      
 
-        Human ninja = new Human("Ninja");
+
 
         wizard.obtenerStats("Wizard");
         samurai.obtenerStats("Samurai");
         ninja.obtenerStats("Ninja");
 
-        wizard.attack(samurai);
+        wizard.attack(samurai); */
 
-        samurai.attack(wizard);
+        Human ninja = new Human("Ninja");
 
-        ninja.attack(wizard);
-        ninja.attack(wizard);
+        //     Human wizard = new Human("Wizard");
+        Human samurai = new Human("Samurai");
 
+        //  samurai.attack(wizard);
+        // ninja.attack(wizard);
+        //  ninja.attack(wizard);
         Wizard wizer = new Wizard("Wizard");
         wizer.obtenerStats("Wizard");
-    }
+        wizer.curar(ninja);
 
+        while (samurai.getHealth() > 0) {
+            wizer.fireBall(samurai);
+            if (samurai.getHealth() <= 0) {
+                break;
+            }
+        }
+    }
 }

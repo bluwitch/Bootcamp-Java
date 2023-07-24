@@ -8,6 +8,14 @@ public class Human {
     private int strength;
     private String rol;
 
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
     public int getHealth() {
         return health;
     }
@@ -20,12 +28,24 @@ public class Human {
         return stealth;
     }
 
-    public int getIntelligence() {
-        return intelligence;
+    public void setStealth(int stealth) {
+        this.stealth = stealth;
     }
 
     public int getStrength() {
         return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
     }
 
     public Human(String rol) {
@@ -77,7 +97,10 @@ public class Human {
 
         if (enemigoVida < 0) {
             enemigoVida = 0;
+        } else if (enemigoVida <= 0) {
+            System.out.println(enemigo.getRol() + " cayó muerto!");
         }
+
         enemigo.setHealth(enemigoVida);
 
         System.out.println("El " + rol + " ataca al " + enemigo.rol + "! " + enemigo.rol + " salud restante: " + enemigo.getHealth());
