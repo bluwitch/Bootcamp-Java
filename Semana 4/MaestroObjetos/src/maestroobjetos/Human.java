@@ -73,13 +73,19 @@ public class Human {
 
     public void obtenerStats(String rol) {
         if ("Wizard".equals(rol)) {
-            System.out.println("Los stats iniciales del Wizard son... " + "Salud: " + getHealth() + ", Stealth: " + getStealth() + ", Intelligence: " + getIntelligence() + ", Strength: " + getStrength());
+            System.out.println("Los stats iniciales del Wizard son... " + "Salud: "
+                    + getHealth() + ", Stealth: " + getStealth() + ", Intelligence: "
+                    + getIntelligence() + ", Strength: " + getStrength());
         }
         if ("Ninja".equals(rol)) {
-            System.out.println("Los stats iniciales del Ninja son..." + " Salud: " + getHealth() + ", Stealth: " + getStealth() + ", Intelligence: " + getIntelligence() + ", Strength: " + getStrength());
+            System.out.println("Los stats iniciales del Ninja son..." + " Salud: "
+                    + getHealth() + ", Stealth: " + getStealth() + ", Intelligence: "
+                    + getIntelligence() + ", Strength: " + getStrength());
         }
         if ("Samurai".equals(rol)) {
-            System.out.println("Los stats iniciales del Samurai son..." + " Salud: " + getHealth() + ", Stealth: " + getStealth() + ", Intelligence: " + getIntelligence() + ", Strength: " + getStrength());
+            System.out.println("Los stats iniciales del Samurai son..." + " Salud: "
+                    + getHealth() + ", Stealth: " + getStealth() + ", Intelligence: "
+                    + getIntelligence() + ", Strength: " + getStrength());
         }
     }
 
@@ -103,6 +109,7 @@ public class Human {
 
         enemigo.setHealth(enemigoVida);
 
-        System.out.println("El " + rol + " ataca al " + enemigo.rol + "! " + enemigo.rol + " salud restante: " + enemigo.getHealth());
+        System.out.println("El " + rol + " ataca al " + enemigo.rol
+                + "! " + enemigo.rol + " salud restante: " + enemigo.getHealth());
     }
 }

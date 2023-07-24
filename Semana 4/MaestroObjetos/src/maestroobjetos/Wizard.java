@@ -5,7 +5,7 @@ public class Wizard extends Human {
     public Wizard(String rol) {
         super(rol);
         this.getRol();
-        this.setRol("wizard");
+        this.setRol("Wizard");
         this.setHealth(50);
         this.getIntelligence();
         this.setIntelligence(8);
@@ -24,12 +24,13 @@ public class Wizard extends Human {
         }
         human.setHealth(enemigoVida);
 
-        System.out.println("El " + this.getRol() + " curo a " + human.getRol() + " por " + curacion + " puntos. Ahora sus puntos de vida son: " + human.getHealth());
+        System.out.println("El " + this.getRol() + " curo a " + human.getRol() + " por " 
+                + curacion + " puntos. Ahora sus puntos de vida son: " + human.getHealth());
     }
 
     public void fireBall(Human enemigo) {
         int dañoMagico = 0;
-        if (this.getIntelligence() > 3) {
+        if (this.getIntelligence() > 0) {
             dañoMagico = this.getIntelligence() * 3;
         }
 
@@ -40,7 +41,10 @@ public class Wizard extends Human {
         }
         enemigo.setHealth(enemigoVida);
 
-        System.out.println("El " + this.getRol() + " ataca al " + enemigo.getRol() + " con una bola de fuego por " + dañoMagico + " puntos! " + enemigo.getRol() + " salud restante: " + enemigo.getHealth());
+        System.out.println("El " + this.getRol() + " ataca al " + enemigo.getRol()
+                + " con una bola de fuego por " + dañoMagico + " puntos! "
+                + enemigo.getRol() + " salud restante: " + enemigo.getHealth());
+
         if (enemigoVida <= 0) {
             System.out.println("EL " + enemigo.getRol() + " cae muerto!");
         }

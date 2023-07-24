@@ -1,6 +1,8 @@
-
 package maestroobjetos;
 
-public class Samurai{
-    
+public class Samurai extends Human {
+
+    public Samurai(String rol){
+        super(rol);
+    }
 }
