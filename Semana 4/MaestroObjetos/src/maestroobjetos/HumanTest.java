@@ -1,10 +1,25 @@
-
 package maestroobjetos;
 
 public class HumanTest {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        Human wizard = new Human("Wizard");
+
+        Human samurai = new Human("Samurai");
+
+        Human ninja = new Human("Ninja");
+
+        wizard.obtenerStats("Wizard");
+        samurai.obtenerStats("Samurai");
+        ninja.obtenerStats("Ninja");
+
+        wizard.attack(samurai);
+
+        samurai.attack(wizard);
+
+        ninja.attack(wizard);
+        ninja.attack(wizard);
+
     }
 
 }
