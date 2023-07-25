@@ -10,12 +10,7 @@ public class HumanTest {
 
         wizer.obtenerStats("Wizard");
 
-     /*   while (samurai.getHealth() > 0) {
-            wizer.fireBall(samurai);
-            if (samurai.getHealth() <= 0) {
-                break;
-            }
-        } */
+        wizer.fireBall(samurai);
 
         ninja.robar(wizer);
         System.out.println(wizer.getHealth());
