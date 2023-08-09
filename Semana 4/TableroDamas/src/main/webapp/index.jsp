@@ -1,10 +1,6 @@
-<%-- 
-    Document   : Damas
-    Created on : 4 Aug 2023, 14:08:39
-    Author     : Martu
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
