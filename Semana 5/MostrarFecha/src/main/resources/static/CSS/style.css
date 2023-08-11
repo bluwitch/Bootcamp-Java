@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+
+body {
+	color: blue;
+	text-align: center;
+	padding-top: 200px;
+	font-family: monospace;
+}
+
+div {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+a {
+	flex: 1;
+	font-size: 34px;
+	text-decoration: none;
+}
