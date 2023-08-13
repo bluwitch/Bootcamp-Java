@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,10 @@
 
 		<h1 class="text-center mt-4 mb-4">Ninja Gold</h1>
 
-		<h2 class="ml-2">Your Gold:</h2>
+		<h2 class="ml-2 contador">
+			Your Gold: <span class="text-warning"> <c:out value="${gold}"></c:out>
+			</span>
+		</h2>
 
 		<div class="row">
 			<div class="card col mx-4 p-4 text-center custom-container">
@@ -63,10 +67,50 @@
 				</form>
 
 			</div>
+
 		</div>
 
+		<div class="text-area">
+
+			<div class="text-area">
+			
+				<h2 class="activities">Activities:</h2>
+
+				<textarea id="messageTextArea" rows="10" cols="50" readonly>
+
+		    </textarea> 
+		    
+			</div>
+
+		</div>
 
 	</div>
+
+	<script>
+	
+    // Función para actualizar el contenido del textarea con los mensajes
+    function updateMessageTextArea(message) {
+        var messageTextArea = document.getElementById('messageTextArea');
+        messageTextArea.value = message + '\n' + messageTextArea.value;
+    }
+
+
+    function getMessages() {
+        fetch('/get-messages')
+            .then(response => response.json())
+            .then(data => {
+                data.messages.forEach(message => {
+                    updateMessageTextArea(message);
+                });
+            });
+    }
+
+    window.onload = function() {
+        getMessages();
+    };
+</script>
+
+
 
 </body>
 

@@ -21,3 +21,19 @@ h1 {
 	font-size: 34px;
 	font-family: monospace;
 }
+
+.contador {
+	font-family: monospace; background-color : maroon;
+	padding: 10px;
+	background-color: maroon;
+}
+
+.text-area, #messageTextArea {
+  margin: 30px 0 0 5px;
+  width: inherit;
+}
+
+.activities {
+	font-family: monospace;
+	margin-left: 3px;
+}
