@@ -73,16 +73,20 @@
 		<div class="text-area">
 
 			<div class="text-area">
-			
+
 				<h2 class="activities">Activities:</h2>
 
 				<textarea id="messageTextArea" rows="10" cols="50" readonly>
 
-		    </textarea> 
-		    
+		    </textarea>
+
 			</div>
 
 		</div>
+
+		<form method="post" action="/reset">
+			<button type="submit" class="resetear">Reiniciar</button>
+		</form>
 
 	</div>
 

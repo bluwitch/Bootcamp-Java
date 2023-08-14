@@ -35,7 +35,7 @@ public class MainController {
 
 	@GetMapping("/gold")
 	public String index(HttpSession sesion, Model model) {
-	    model.addAttribute("gold", sesion.getAttribute("gold"));
+		model.addAttribute("gold", sesion.getAttribute("gold"));
 
 		return "index";
 	}
@@ -45,35 +45,35 @@ public class MainController {
 	@SuppressWarnings("unchecked")
 	@PostMapping("/gold")
 	public String enviarOro(HttpSession sesion, @RequestParam(value = "lugar") String lugar) {
-	    int oro = 0;
-	    ArrayList<String> ganancias = new ArrayList<>();
-	    SimpleDateFormat formatFecha = new SimpleDateFormat("MMM DY h:mm a");
+		int oro = 0;
+		ArrayList<String> ganancias = new ArrayList<>();
+		SimpleDateFormat formatFecha = new SimpleDateFormat("MMM DY h:mm a");
 
-	    if (sesion.getAttribute("gold") == null) {
-	        sesion.setAttribute("gold", oro);
-	        sesion.setAttribute("ganancias", ganancias);
-	    } else {
-	        oro = (int) sesion.getAttribute("gold");
-	        if (sesion.getAttribute("ganancias") != null) {
-	            ganancias = (ArrayList<String>) sesion.getAttribute("ganancias");
-	        }
-	    }
+		if (sesion.getAttribute("gold") == null) {
+			sesion.setAttribute("gold", oro);
+			sesion.setAttribute("ganancias", ganancias);
+		} else {
+			oro = (int) sesion.getAttribute("gold");
+			if (sesion.getAttribute("ganancias") != null) {
+				ganancias = (ArrayList<String>) sesion.getAttribute("ganancias");
+			}
+		}
 
 		PlaceInfo placeInfo = lugares.get(lugar);
 		if (placeInfo != null) {
-		    int cantidad = new Random().nextInt(placeInfo.max - placeInfo.min + 1) + placeInfo.min;
-		    String mensaje = "Entraste a " + placeInfo.nombre;
-		    if (cantidad > 0) {
-		        mensaje += " y aumentas " + cantidad + " oro";
-		    } else if (cantidad < 0) {
-		        mensaje += " y pierdes " + Math.abs(cantidad) + " oro";
-		    }
-		    mensaje += " (" + formatFecha.format(new Date()) + ")";
-		    
-		    ganancias.add(0, mensaje);
-		    oro += cantidad;
-		    sesion.setAttribute("gold", oro);
-		    sesion.setAttribute("ganancias", ganancias);
+			int cantidad = new Random().nextInt(placeInfo.max - placeInfo.min + 1) + placeInfo.min;
+			String mensaje = "Entraste a " + placeInfo.nombre;
+			if (cantidad > 0) {
+				mensaje += " y aumentas " + cantidad + " oro";
+			} else if (cantidad < 0) {
+				mensaje += " y pierdes " + Math.abs(cantidad) + " oro";
+			}
+			mensaje += " (" + formatFecha.format(new Date()) + ")";
+
+			ganancias.add(0, mensaje);
+			oro += cantidad;
+			sesion.setAttribute("gold", oro);
+			sesion.setAttribute("ganancias", ganancias);
 		}
 
 		return "redirect:/gold";
@@ -91,4 +91,12 @@ public class MainController {
 			this.nombre = nombre;
 		}
 	}
+
+	@PostMapping("/reset")
+	public String reiniciarConteo(HttpSession sesion) {
+		sesion.setAttribute("gold", 0);
+		sesion.removeAttribute("ganancias");
+		return "redirect:/gold";
+	}
+
 }

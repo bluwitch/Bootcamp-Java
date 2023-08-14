@@ -23,17 +23,27 @@ h1 {
 }
 
 .contador {
-	font-family: monospace; background-color : maroon;
+	font-family: monospace;
+	background-color: maroon;
 	padding: 10px;
 	background-color: maroon;
+	color: white;
 }
 
 .text-area, #messageTextArea {
-  margin: 30px 0 0 5px;
-  width: inherit;
+	margin: 30px 0 0 5px;
+	width: inherit;
 }
 
 .activities {
 	font-family: monospace;
 	margin-left: 3px;
+}
+
+.resetear {
+	background: linear-gradient(to bottom, maroon 40%, black 60%);
+	box-shadow: 5px 5px rgba(0, 0, 0, 0.7);
+	font-weight: 600;
+	color: white;
+	margin-left: 10px;
 }
