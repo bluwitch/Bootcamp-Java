@@ -24,7 +24,7 @@ public class MainController {
 		lugares.put("cave", new PlaceInfo(5, 10, "(earns 5-10 gold)", "Cave"));
 		lugares.put("house", new PlaceInfo(2, 5, "(earns 2-5 gold)", "House"));
 		lugares.put("casino", new PlaceInfo(-50, 50, "(earns/takes 50 gold)", "Casino"));
-		// Agrega otros lugares aquí si es necesario
+
 	}
 
 	// redirecciona a la ruta /gold
