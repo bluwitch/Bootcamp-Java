@@ -1,10 +1,14 @@
 package com.bootcamp.languages.services;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
+
 import org.springframework.stereotype.Service;
+
 import com.bootcamp.languages.models.Language;
 import com.bootcamp.languages.repositories.LanguageRepo;
+
 import jakarta.transaction.Transactional;
 
 @Service
@@ -21,8 +25,8 @@ public class LanguageService {
 	}
 
 	// Crea un lenguaje
-	public Language createBook(Language b) {
-		return languageRepo.save(b);
+	public Language createLanguage(Language lang) {
+		return languageRepo.save(lang);
 	}
 
 	// Obtiene la información de un lenguaje
@@ -35,9 +39,10 @@ public class LanguageService {
 		}
 	}
 
+	// Edita un lenguaje
 	@Transactional
 	public void updateLanguage(Language language) {
-        // Verificar si el lenguaje ya existe en la base de datos
+		// Verificar si el lenguaje ya existe en la base de datos
 		Language existingLanguage = languageRepo.findById(language.getId()).orElse(null);
 		if (existingLanguage != null) {
 			// Actualiza los campos necesarios del lenguaje existente
@@ -46,6 +51,15 @@ public class LanguageService {
 			existingLanguage.setCurrentVersion(language.getCurrentVersion());
 			// Guardar los cambios en la base de datos
 			languageRepo.save(existingLanguage);
+		}
+	}
+
+	// Eliminar lenguaje
+	public void deleteLanguage(Long id) {
+		if (languageRepo.existsById(id)) {
+			languageRepo.deleteById(id);
+		} else {
+			throw new NoSuchElementException("No se encontro el lenguaje a eliminar");
 		}
 	}
 }
