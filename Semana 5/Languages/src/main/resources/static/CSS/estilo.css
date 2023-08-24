@@ -1,0 +1,100 @@
+/* Hice un tema al estilo windows 98*/
+body {
+	background-color: #008080;
+	font-family: Arial, sans-serif;
+	margin: 0 auto;
+}
+
+.header {
+	background: linear-gradient(to right, #1a237e, #3949ab);
+	color: #fff;
+	padding: 1px;
+	font-weight: bold;
+	font-size: small;
+	text-indent: 15px;
+	margin-bottom: 10px;
+}
+
+.window-button {
+    background: no-repeat center #ccc;
+    border: 2px solid #7c7c7c;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    height: 20px;
+    width: 20px;
+    float: right;
+    margin-left: 2px;
+    background-image: url(https://win98icons.alexmeub.com/images/question-icon.png);
+}
+
+.table-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 80%;
+	background-color: #C0C0C0; /* Color de fondo gris claro */
+	padding: 20px;
+	border: 2px solid #808080; /* Borde gris */
+}
+
+.items {
+	background: none;
+}
+
+.links {
+	color: #0000FF; /* Texto en color azul */
+	text-decoration: none; /* Sin subrayado en los enlaces */
+	padding: 5px;
+	font-size: large;
+}
+
+.form-container {
+	margin: 20px auto;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	background-color: #C0C0C0; /* Color de fondo gris claro */
+	padding: 20px;
+	border: 2px solid #808080; /* Borde gris */
+}
+
+.edit {
+	border: 1px solid #131313;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	background: #c0c0c0;
+	width: 75px;
+	text-align: center;
+	padding: 5px 0;
+	float: right;
+	margin-left: 5px;
+	text-decoration: none;
+	font-size: small;
+	color: #131313;
+}
+
+.delete-button {
+	border: 1px solid #131313;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	background: #c0c0c0;
+	width: 75px;
+	text-align: center;
+	padding: 5px 0;
+	float: right;
+	margin-left: 5px;
+}
+
+.wrapper {
+	border: 2px solid #7c7c7c;
+	border-top-color: #fff;
+	border-bottom-color: #131313;
+	border-left-color: #fff;
+	background: #c0c0c0;
+	width: 90%;
+	max-width: 800px;
+	top: 25%;
+	left: 25%;
+	resize: both;
+	margin: 5% auto;
+}

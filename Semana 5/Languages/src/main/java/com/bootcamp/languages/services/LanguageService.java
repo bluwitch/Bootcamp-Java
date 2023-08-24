@@ -53,13 +53,14 @@ public class LanguageService {
 			languageRepo.save(existingLanguage);
 		}
 	}
-
-	// Eliminar lenguaje
-	public void deleteLanguage(Long id) {
-		if (languageRepo.existsById(id)) {
-			languageRepo.deleteById(id);
-		} else {
-			throw new NoSuchElementException("No se encontro el lenguaje a eliminar");
-		}
-	}
+	
+	
+    //Eliminar lenguaje
+    public void deleteLanguage(Long id){
+        if(languageRepo.existsById(id)){
+            languageRepo.deleteById(id);
+        }else{
+            throw new NoSuchElementException("No se encontro el lenguaje a eliminar");
+        }
+    }
 }

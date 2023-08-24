@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>[[${language.name}]]</title>
 </head>
 <body>
+<nav>
+    <a href="/languages">Dashboard</a>
+</nav>
+
+
+<div class="form">
+    <form th:action="@{/languages/edit/{id}(id=${language.id})}" method="post">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:value="${language.name}" /><br>
+    
+    <label for="creator">Creator</label>
+    <input type="text" id="creator" name="creator" th:value="${language.creator}" /><br>
+    
+    <label for="creator">Current version</label>
+    <input type="text" id="currentVersion" name="currentVersion" th:value="${language.currentVersion}" /><br>
+    
+    <button type="submit">Update</button>
+    
+    </form>
+</div>
 
 </body>
 </html>
