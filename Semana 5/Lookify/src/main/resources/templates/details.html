@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>[[${song.name}]]</title>
+</head>
+<body>
+	<h1>Song Details</h1>
+	<a href="/dashboard">Dashboard</a>
+	<p>
+		<strong>Name:</strong> <span th:text="${song.name}"></span>
+	</p>
+	<p>
+		<strong>Creator:</strong> <span th:text="${song.artist}"></span>
+	</p>
+	<p>
+		<strong>Current Version:</strong> <span
+			th:text="${song.clasificacion}"></span>
+	</p>
+</body>
+</html>

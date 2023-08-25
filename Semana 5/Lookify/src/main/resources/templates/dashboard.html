@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Lookify!</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+	<nav>
+		<header>
+			<ul>
+				<li><a href="/songs/new">Add new</a></li>
+				<li><a href="/songs/topten">Top Songs</a></li>
+			</ul>
+		</header>
+
+		<form action="/search" method="GET">
+			<input type="text" name="q" placeholder="Search...">
+			<button type="submit">New Search</button>
+		</form>
+
+	</nav>
+
+	<div class="song-table">
+		<table>
+			<tr class="items">
+				<th>Name</th>
+				<th>Artist</th>
+				<th>Rating</th>
+				<th>Actions</th>
+			</tr>
+
+			<tr th:each="song : ${songs}">
+				<td><a class="links" th:href="@{/songs/{id}(id=${song.id})}"
+					th:text="${song.name}">${song.name}</a></td>
+
+				<td th:text="${song.artist}"></td>
+				<td th:text="${song.clasificacion}"></td>
+				<td><a class="edit"
+					th:href="@{/songs/edit/{id}(id=${song.id})}">Edit</a>
+					<form th:action="@{/dashboard/delete/{id}(id=${song.id})}"
+						method="post">
+						<button type="submit" class="delete-button"
+							data-song-id="${song.id}">Delete</button>
+					</form></td>
+			</tr>
+		</table>
+	</div>
+
+	<script th:inline="javascript">
+		$(document).ready(function() {
+			$(".delete-button").click(function() {
+				var songId = $(this).data("song-id");
+				if (confirm("Are you sure you want to delete this song?")) {
+					window.location.href = "/dashboard/delete/{id}" + songId;
+				} else {
+					// Agrega un mensaje o acción si el usuario elige "Cancel"
+					console.log("Deletion canceled for song ID:", songId);
+				}
+			});
+		});
+	</script>
+
+
 
 </body>
 </html>

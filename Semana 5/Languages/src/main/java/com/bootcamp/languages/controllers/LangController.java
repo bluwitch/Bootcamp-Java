@@ -48,14 +48,13 @@ public class LangController {
 	public String buscar(@PathVariable("id") Long id, Model model) {
 		Language language = languageService.findLanguage(id);
 		model.addAttribute("language", language);
-		return "vista"; // Nombre de la plantilla HTML
+		return "vista"; //
 	}
 
 	// crea un lenguaje en el formulario
 	@PostMapping("/languages")
 	public String insertarLenguaje(@ModelAttribute @Valid Language language, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			// Si hay errores de validación, puedes manejarlos aquí
 			return "languages";
 		}
 		repo.save(language);
