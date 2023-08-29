@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear categoria</title>
+</head>
+<body>
+
+<h1>Crear categoria</h1>
+
+<form th:action="@{/categories/new}" method="post" th:object="${nuevaCategoria}">
+    <label>Nombre:
+    <input type="text" th:field="*{nombre}">
+    </label>
+    <button type="submit">Crear</button>
+</form>
+<a href="/">Volver</a>
+</body>
+</html>
